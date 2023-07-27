@@ -1122,8 +1122,8 @@ Main Banner Area CSS
 
 .item-bg1 {
   /* background-image: url(../img/main-banner1.jpg); */
-  linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
-  url('images/background.jpg');
+  /* linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+  url('images/background.jpg'); */
   
   /* https://previmedica.com/cdn/shop/files/header_homepage_02.jpg?v=1615319866 */
   /* background-image: linear-gradient(to bottom, rgba(25, 26, 33, 0.52), rgba(90, 88, 89, 0.73)),
@@ -1538,11 +1538,53 @@ About Area CSS
   width: 100%;
   height: 100%;
   /* background-image: url(../img/about-img1.jpg); */
-  background-image: url(https://previmedica.com/cdn/shop/files/Copy_of_Test._Don_t_guess._3_720x.png?v=1615319866);
+  background-image: url(../img/kamar.webp);
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.about-content h2  {
+  color: white;
+  text-transform:uppercase;
+}
+
+.our-mission-content h1  {
+  color: white;
+  text-transform:uppercase;
+}
+
+.our-mission-content  p  {
+  color: gray;
+}
+.about-content p{
+  color: wheat;
+}
+.fooditextting1 h3{
+  color: #7fb65c ;
+}
+.foodintolerance{
+  width: 100%;
+  height: 100%;
+  
+  background-image: linear-gradient(to bottom, rgba(25, 26, 33, 0.52), rgba(90, 88, 89, 0.73)), url(https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?cs=srgb&dl=pexels-lukas-616401.jpg&fm=jpg);
+
+  /* background-image: url(../img/about-img1.jpg); */
+  /* background-image: url(); */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.wheatcolor{
+  
+  color: white;
+}
+.fooditextting  h3{
+  font-weight: 800;
+  text-transform: capitalize;
+  
+}
+
 
 .about-image img {
   display: none;
@@ -1631,7 +1673,18 @@ Our Mission Area CSS
   width: 100%;
   height: 100%;
   /* background-image: url(https://previmedica.com/cdn/shop/files/header_homepage_01_720x.jpg?v=1614768615); */
-  background-image: url(../img/young-woman-suffering-stomach-pain.jpg);
+  background-image: url(../img/pic-_experts.webp);
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.our-mission-image1 {
+  width: 100%;
+  height: 100%;
+  /* background-image: url(https://previmedica.com/cdn/shop/files/header_homepage_01_720x.jpg?v=1614768615); */
+  background-image: url(../img/c.png);
 
   background-position: center center;
   background-size: cover;
