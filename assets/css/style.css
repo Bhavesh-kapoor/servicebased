@@ -1374,6 +1374,22 @@ Main Services Area CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   overflow: hidden;
+  height: 280px !important;
+}
+
+
+.main-services-box1 {
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 10px 55px 5px rgba(137, 173, 255, 0.2);
+          box-shadow: 0 10px 55px 5px rgba(137, 173, 255, 0.2);
+  padding: 25px 20px;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  height: 380px !important;
 }
 
 .main-services-box .icon {
