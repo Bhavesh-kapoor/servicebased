@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.envytheme.com/fovia/default/single-product.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Jul 2023 05:46:56 GMT -->
 
 <head>
     <!-- Required meta tags -->
@@ -33,9 +32,51 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <title>Fovia - Medical Doctor & Healthcare Clinic Bootstrap 5 Template</title>
+    <title>Fovia - </title>
 
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <style>
+        tr:hover {
+            background-color: #19ce67;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: auto;
+            margin: 0 auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .currency {
+            font-size: 16px;
+            /* Adjust the font size as needed */
+            vertical-align: middle;
+            /* Align the currency symbol vertically in the middle */
+        }
+
+        .price {
+            font-weight: bold;
+            /* Make the price text bold */
+        }
+
+        .decimal {
+            font-size: 16px;
+            /* Adjust the font size as needed */
+        }
+
+        .firstone,
+        .secondone {
+            background-color: #19ce67;
+
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -201,7 +242,24 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <div class="product-details-image">
+                    <div class="product-details-image" id="mainimage">
+                        <img src="https://previmedica.com/cdn/shop/products/GF_Shopify_image-_250_Foods_11201abf-f1bd-4da5-b4f0-4729cac7255c_540x.png?v=1569598743"
+                            alt="image">
+                    </div>
+                    <div class="product-details-image none" id="cat1image">
+                        <img src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg"
+                            alt="image">
+                    </div>
+                    <div class="product-details-image none" id="cat2image">
+                        <img src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg"
+                            alt="image">
+                    </div>
+
+                    <div class="product-details-image none" id="cat3image">
+                        <img src="https://img.freepik.com/free-photo/flat-lay-batch-cooking-composition_23-2148765597.jpg"
+                            alt="image">
+                    </div>
+                    <div class="product-details-image none" id="cat4image">
                         <img src="https://previmedica.com/cdn/shop/products/GF_Shopify_image-_250_Foods_11201abf-f1bd-4da5-b4f0-4729cac7255c_540x.png?v=1569598743"
                             alt="image">
                     </div>
@@ -240,44 +298,85 @@
                                 <section class="widget widget_services_list">
                                     <h3 class="widget-title">Choose Food Allergy test </h3>
 
-                                   
+                                    <div class="row">
+                                        <div class="col-md-9">
 
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">1</th>
-                                                        <th scope="col">Veg food allergy</th>
-                                                        <th scope="col">₹ 2500/</th>
-                                                        <th><a href="" class="text-success">Click Here</a></th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="col">2</th>
-                                                        <th scope="col">Non veg food allergy</th>
-                                                        <th scope="col">₹ 2500/</th>
-                                                        <th><a href="" class="text-success">Click Here</a></th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="col">3</th>
-                                                        <th scope="col">Inhalant allergy </th>
-                                                        <th scope="col">₹ 2500/</th>
-                                                        <th><a href="" class="text-success">Click Here</a></th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="col">4</th>
-                                                        <th scope="col">Drug allergy</th>
-                                                        <th scope="col">₹ 2500/</th>
-                                                        <th><a href="" class="text-success">Click Here</a></th>
-                                                    </tr>
-                                                </thead>
+                                        </div>
+                                        <div class="col-md-3" style="display: none;" id="showunselect">
+                                            <a href="javascript:void(0)" onclick="hidecategory()"
+                                                class="text text-danger">Unselect All</a>
+                                        </div>
+                                    </div>
 
-                                            </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr id="firstone">
+                                                <th scope="col">1</th>
+                                                <th scope="col"
+                                                    onclick="selectcategory('Veg food allergy' , '2500' ,'first')">Veg
+                                                    food allergy</th>
+                                                <!-- <th scope="col">₹ 2500/</th> -->
+                                                <!-- <th><a href="" class="text-success">Click Here</a></th> -->
+                                            </tr>
+                                            <tr id="secondone">
+                                                <th scope="col">2</th>
+                                                <th scope="col"
+                                                    onclick="selectcategory('Non veg food allergy' , '2500' ,'second')">
+                                                    Non veg food allergy</th>
+                                                <!-- <th scope="col">₹ 2500/</th> -->
+                                                <!-- <th><a href="" class="text-success">Click Here</a></th> -->
+                                            </tr>
+                                            <tr id="third">
+                                                <th scope="col">3</th>
+                                                <th scope="col"
+                                                    onclick="selectcategory('Inhalant allergy' , '2500' ,'third')">
+                                                    Inhalant allergy </th>
+                                                <!-- <th scope="col">₹ 2500/</th> -->
+                                                <!-- <th><a href="" class="text-success">Click Here</a></th> -->
+                                            </tr>
+                                            <tr id="four">
+                                                <th scope="col">4</th>
+                                                <th scope="col"
+                                                    onclick="selectcategory('Veg food allergy' , '2500' ,'four')">Veg
+                                                    food allergy</th>
+                                                <!-- <th scope="col">₹ 2500/</th> -->
+                                                <!-- <th><a href="" class="text-success">Click Here</a></th> -->
+                                            </tr>
+                                        </thead>
+
+                                    </table>
+
+
+
+
+                                    <div class="product" style="display:none;">
+                                        <h2 id="categoryname"></h2>
+                                        <div class="price">
+                                            <span class="currency">₹</span>
+                                            <span class="integer"></span>
+                                            <span class="decimal">.00</span>
+                                            <div class="buy-checkbox-btn">
+
+
+                                                <div class="item">
+
+
+                                                    <a href="cart.html" class="btn btn-light"> <i
+                                                            class="fas fa-cart-plus"></i>Add to
+                                                        Cart</a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
 
 
 
 
 
 
-                                    
+
                                 </section>
 
 
@@ -288,33 +387,33 @@
                         <!-- <div class="product-add-to-cart"> -->
 
 
-                            <!-- <div class="input-counter">
+                        <!-- <div class="input-counter">
                                     <span class="minus-btn"><i class="fas fa-minus"></i></span>
                                     <input type="text" min="1" value="1">
                                     <span class="plus-btn"><i class="fas fa-plus"></i></span>
                                 </div> -->
 
-                            <!-- <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to
+                        <!-- <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to
                                 Cart</button> -->
                         <!-- </div> -->
 
-                        <div class="buy-checkbox-btn">
-                          
+                        <!-- <div class="buy-checkbox-btn">
+
 
                             <div class="item">
-                                
+
 
                                 <a href="cart.html" class="btn btn-light"> <i class="fas fa-cart-plus"></i>Add to
                                     Cart</a>
                             </div>
                             <div class="item">
-                                
+
 
                                 <a href="cart.html" class="btn btn-light">Buy it now!</a>
                             </div>
-                        </div>
+                        </div> -->
 
-                        
+
                     </div>
                 </div>
 
@@ -718,8 +817,94 @@
     <script src="assets/js/contact-form-script.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
 </body>
 
-<!-- Mirrored from templates.envytheme.com/fovia/default/single-product.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Jul 2023 05:46:58 GMT -->
+
+<script>
+    function selectcategory(value, price, id) {
+        $('.product').show();
+        $('#showunselect').show();
+        if (id == 'first') {
+            $('#firstone').addClass('firstone');
+            $('#secondone').removeClass('firstone');
+            $('#third').removeClass('firstone');
+            $('#four').removeClass('firstone');
+            $('#cat1image').show();
+            $('#cat2image').hide();
+            $('#cat3image').hide();
+            $('#cat4image').hide();
+            $('#mainimage').hide();
+
+        }
+        if (id == 'second') {
+            $('#firstone').removeClass('firstone');
+            $('#secondone').addClass('firstone');
+            $('#third').removeClass('firstone');
+            $('#four').removeClass('firstone');
+            $('#cat1image').hide();
+            $('#cat2image').show();
+            $('#cat3image').hide();
+            $('#cat4image').hide();
+
+            $('#mainimage').hide();
+
+
+        }
+        if (id == 'third') {
+            $('#firstone').removeClass('firstone');
+            $('#secondone').removeClass('firstone');
+            $('#third').addClass('firstone');
+            $('#four').removeClass('firstone');
+            $('#cat1image').hide();
+            $('#cat2image').hide();
+            $('#cat3image').show();
+            $('#cat4image').hide();
+
+
+            $('#mainimage').hide();
+
+
+        }
+        if (id == 'four') {
+            $('#firstone').removeClass('firstone');
+            $('#secondone').removeClass('firstone');
+            $('#third').removeClass('firstone');
+            $('#four').addClass('firstone');
+            $('#cat1image').hide();
+            $('#cat2image').hide();
+            $('#cat3image').hide();
+            $('#cat4image').show();
+            $('#mainimage').hide();
+
+
+        }
+
+
+        $('#categoryname').html(value);
+        $('#categoryname').css('color', 'green');
+        $('.integer').html(price);
+    }
+
+    function hidecategory() {
+        $('#categoryname').html('');
+        $('.integer').html('');
+        $('.product').hide();
+        $('#showunselect').hide();
+        $('#firstone').removeClass('firstone');
+        $('#secondone').removeClass('firstone');
+        $('#cat1image').hide();
+        $('#cat2image').hide();
+        $('#cat3image').hide();
+        $('#cat4image').hide();
+        $('#mainimage').show();
+
+
+    }
+</script>
+
+
 
 </html>
