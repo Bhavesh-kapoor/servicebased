@@ -67,11 +67,14 @@
             font-size: 16px;
             /* Adjust the font size as needed */
         }
-        .firstone , .secondone{
+
+        .firstone,
+        .secondone {
             background-color: #19ce67;
 
         }
-        .none{
+
+        .none {
             display: none;
         }
     </style>
@@ -184,7 +187,18 @@
 
 
                                 <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">Clinicians</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Clinicians <i
+                                            class="fas fa-plus"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a href="login.html" class="nav-link"> Login
+                                                Clinician
+                                            </a></li>
+
+                                        <li class="nav-item"><a href="login.html" class="nav-link">
+                                                Register
+                                                Clinician </a></li>
+                                    </ul>
+                                </li>
 
                             </ul>
 
@@ -207,7 +221,7 @@
                                     </div>
                                 </div>
 
-                                <a href="#" class="btn btn-primary">Contact Us</a>
+                                <a href="login.html" class="btn btn-primary">Login/Sign Up</a>
                             </div>
                         </div>
                     </nav>
@@ -241,15 +255,15 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <div class="product-details-image" id="mainimage" >
+                    <div class="product-details-image" id="mainimage">
                         <img src="https://previmedica.com/cdn/shop/products/GF_Shopify_image-_250_Foods_11201abf-f1bd-4da5-b4f0-4729cac7255c_540x.png?v=1569598743"
                             alt="image">
                     </div>
-                    <div class="product-details-image none"  id="cat1image" >
+                    <div class="product-details-image none" id="cat1image">
                         <img src="https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?size=626&ext=jpg&ga=GA1.1.384751719.1690384891&semt=sph"
                             alt="image">
                     </div>
-                    <div class="product-details-image none"  id="cat2image">
+                    <div class="product-details-image none" id="cat2image">
                         <img src="https://img.freepik.com/free-photo/colorful-collage-fruits-texture-close-up_23-2149870295.jpg?size=626&ext=jpg&ga=GA1.1.384751719.1690384891&semt=ais"
                             alt="image">
                     </div>
@@ -286,20 +300,21 @@
 
 
                                 <section class="widget widget_services_list">
-                                    <h3 class="widget-title">Choose Food Intolerance test  </h3>
+                                    <h3 class="widget-title">Choose Food Intolerance test </h3>
                                     <div class="row">
                                         <div class="col-md-9">
 
                                         </div>
-                                        <div class="col-md-3" style="display: none;"  id="showunselect">
-                                            <a href="javascript:void(0)" onclick="hidecategory()" class="text text-danger">Unselect All</a>
+                                        <div class="col-md-3" style="display: none;" id="showunselect">
+                                            <a href="javascript:void(0)" onclick="hidecategory()"
+                                                class="text text-danger">Unselect All</a>
                                         </div>
                                     </div>
 
 
                                     <table class="table ">
                                         <thead>
-                                            <tr  id="firstone">
+                                            <tr id="firstone">
                                                 <th scope="col">1</th>
                                                 <th scope="col"
                                                     onclick="selectcategory('58+ food article' , '6000' ,'first')">58+
@@ -308,7 +323,7 @@
                                             </tr>
                                             <tr id="secondone">
                                                 <th scope="col">2</th>
-                                                <th scope="col" 
+                                                <th scope="col"
                                                     onclick="selectcategory('200+ food article' , '15000' ,'second')">
                                                     200+ food article</th>
                                                 <!-- <th scope="col">₹ 15000/</th> -->
@@ -318,7 +333,7 @@
                                     </table>
 
 
-                                    <div class="product"  style="display:none;">
+                                    <div class="product" style="display:none;">
                                         <h2 id="categoryname"></h2>
                                         <div class="price">
                                             <span class="currency">₹</span>
@@ -786,7 +801,7 @@
     function selectcategory(value, price, id) {
         $('.product').show();
         $('#showunselect').show();
-        if (id == 'first'){
+        if (id == 'first') {
             $('#firstone').addClass('firstone');
             $('#secondone').removeClass('firstone');
             $('#cat1image').show();
@@ -794,32 +809,32 @@
             $('#mainimage').hide();
 
         }
-        if(id=='second'){
+        if (id == 'second') {
             $('#firstone').removeClass('firstone');
             $('#secondone').addClass('firstone');
             $('#cat1image').hide();
             $('#cat2image').show();
             $('#mainimage').hide();
 
-        
+
         }
 
 
         $('#categoryname').html(value);
-        $('#categoryname').css('color','green');
+        $('#categoryname').css('color', 'green');
         $('.integer').html(price);
     }
 
-    function hidecategory(){
+    function hidecategory() {
         $('#categoryname').html('');
         $('.integer').html('');
         $('.product').hide();
         $('#showunselect').hide();
         $('#firstone').removeClass('firstone');
-            $('#secondone').removeClass('firstone');
-            $('#cat1image').hide();
-            $('#cat2image').hide();
-            $('#mainimage').show();
+        $('#secondone').removeClass('firstone');
+        $('#cat1image').hide();
+        $('#cat2image').hide();
+        $('#mainimage').show();
 
 
     }
